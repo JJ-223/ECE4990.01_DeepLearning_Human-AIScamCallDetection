@@ -47,6 +47,29 @@ p_scam ∈ [0,1]                   p_deepfake ∈ [0,1]
 
 ---
 
+## Datasets
+
+### Training datasets
+
+| Dataset | Used for | Link |
+|---------|----------|------|
+| WaveFake | SpecRNet fake audio | [Zenodo](https://zenodo.org/records/5642694) |
+| LJSpeech-1.1 | SpecRNet real audio (English) | [keithito.com](https://data.keithito.com/data/speech/LJSpeech-1.1.tar.bz2) |
+| JSUT | SpecRNet real audio (Japanese) | [Project page](https://sites.google.com/site/shinnosuketakamichi/publication/jsut) |
+| SMS Scam Detection Merged | DAPTL Stage 1 pre-training | [Github repo](https://github.com/IbrahimBagwan1/Scam-Call-Detection-Framework/blob/main/dataset/call_dataset.csv) |
+| Composite Call Transcripts | DAPTL Stage 2 fine-tuning | [GitHub repo](https://github.com/IbrahimBagwan1/Scam-Call-Detection-Framework/blob/main/dataset/sms_dataset.csv) |
+
+### Preprocessed cache
+
+To avoid re-processing 35 GB of raw audio every session, LFCC tensors are
+precomputed and stored as a Kaggle dataset:
+
+| Cache | Description | Link |
+|-------|-------------|------|
+| SpecRNet LFCC cache | 136,083 preprocessed `.pt` tensors (~15 GB) | [Kaggle](https://www.kaggle.com/datasets/starjelly54/specrnet-lfccdatasets) |
+
+---
+
 ## Models
 
 ### SpecRNet — Audio Deepfake Detector
@@ -109,29 +132,6 @@ DAPTL call transcript dataset with a neutral deepfake prior of 0.5.
     └── ...                       # Checkpoints, results, plots
 └── README.md
 ```
-
----
-
-## Datasets
-
-### Training datasets
-
-| Dataset | Used for | Link |
-|---------|----------|------|
-| WaveFake | SpecRNet fake audio | [Zenodo](https://zenodo.org/records/5642694) |
-| LJSpeech-1.1 | SpecRNet real audio (English) | [keithito.com](https://data.keithito.com/data/speech/LJSpeech-1.1.tar.bz2) |
-| JSUT | SpecRNet real audio (Japanese) | [Project page](https://sites.google.com/site/shinnosuketakamichi/publication/jsut) |
-| SMS Scam Detection Merged | DAPTL Stage 1 pre-training | [Github repo](https://github.com/IbrahimBagwan1/Scam-Call-Detection-Framework/blob/main/dataset/call_dataset.csv) |
-| Composite Call Transcripts | DAPTL Stage 2 fine-tuning | [GitHub repo](https://github.com/IbrahimBagwan1/Scam-Call-Detection-Framework/blob/main/dataset/sms_dataset.csv) |
-
-### Preprocessed cache
-
-To avoid re-processing 35 GB of raw audio every session, LFCC tensors are
-precomputed and stored as a Kaggle dataset:
-
-| Cache | Description | Link |
-|-------|-------------|------|
-| SpecRNet LFCC cache | 136,083 preprocessed `.pt` tensors (~15 GB) | [Kaggle](https://www.kaggle.com/datasets/starjelly54/specrnet-lfccdatasets) |
 
 ---
 
