@@ -98,9 +98,15 @@ DAPTL call transcript dataset with a neutral deepfake prior of 0.5.
 ├── specrnet_training.ipynb       # SpecRNet training pipeline
 ├── daptl_training.ipynb          # DAPTL two-stage training pipeline
 ├── mlp_fusion.ipynb              # MLP fusion layer training + evaluation
-├── specrnet_arch.py              # SpecRNet model class definition
-├── daptl_inference.py            # DAPTL inference helper
-├── fusion_mlp.py                 # FusionMLP class + load/predict helpers
+├── specrnet_project/            
+    ├── specrnet_arch.py          # SpecRNet model class definition
+    └── ...                       # Checkpoints, results, plots
+├── daptl_project/                
+    ├── daptl_inference.py        # DAPTL inference helper
+    └── ...                       # Checkpoints, results, plots
+├── fusion_project/               
+    ├── fusion_mlp.py             # FusionMLP class + load/predict helpers
+    └── ...                       # Checkpoints, results, plots
 └── README.md
 ```
 
