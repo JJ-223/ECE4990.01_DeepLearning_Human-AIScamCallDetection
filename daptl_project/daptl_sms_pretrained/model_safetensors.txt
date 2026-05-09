@@ -1,0 +1,1 @@
+Was not able to upload model.safetensors file, was too large (320.794 MB), able to make the file through the daptl_training notebook
